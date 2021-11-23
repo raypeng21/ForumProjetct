@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Detail</title>
+  <%- include head %>
+</head>
+<body>
+
+  <%- include('bar', {username: username}) %>
+
+<!-- article details -->
+<div class="read">
+  <div class="detail">
+    <div class="title"><%=item.title%></div>
+    <div class='desc'>
+      <span>Author:  <%=item.username%></span>
+      <span>Release Time： <%=item.time%></span>
+    </div>
+    <div class="content"><%-item.content%></div>
+  </div>
+<HR style="FILTER: progid:DXImageTransform.Microsoft.Shadow(color:#57b537,direction:145,strength:15)" width="80%" color=#57b537 SIZE=3/>
+
+<!-- comment editor and comments -->
+
+<div class="comment_list">
+    <% list.map(function(item,index){ %>
+      <div class="row2">
+        <span><%= item.username %>: </span>
+        <span><%= item.comment %></span>
+        <span><%= item.time %></span>
+      </div>
+    <% }) %>
+</div>
+
+
+
+
+
+  <div class ="comment">
+      <span> Leave your comments</span>
+      <form action="/article/addc" method="post">
+        <input type="text" name="comment" placeholder="Leave your comments here." value="">
+        <input type="submit" value="Reply">
+        <input type="hidden" name="id" value="<%- item.id %>">
+      </form>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

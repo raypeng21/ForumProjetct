@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Log in</title>
+  <%- include head %>
+</head>
+<body>
+
+  <div class="form-box">
+    <form action="/users/login" method="post">
+      <input type="text" name="username" value="" placeholder="Enter your user name">
+      <input type="password" name="password" value="" placeholder="Enter your password">
+      <input type="submit" name="" value="Sign in">
+    </form>
+    <div>Not regigted?，<a href="/regist">Regist Now</a>！</div>
+  </div>
+
+</body>
+</html>
