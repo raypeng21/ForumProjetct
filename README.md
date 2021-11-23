@@ -9,7 +9,7 @@ NodeJS based Text, Image Real Time Room that can post article and communicate wi
 You need installed Node.js, MongoDB globally.
 - Step1: Clone StudentRoom repository locally
 ```sh
-$ git clone https://git.cs.usask.ca/xuw313/cmpt350_project.git 
+$ git clone https://github.com/raypeng21/ForumProjetct.git
 ```
 - Step2: cd into cloned directory <Ex : /project> 
 
